@@ -1,0 +1,26 @@
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - data:/data/db
+
+  backend:
+    image: abhyuday1212/blog-app-backend
+    container_name: backend_container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    env_file:
+      - ./backend/.env
+
+  frontend:
+    image: abhyuday1212/blog-app-frontend
+    container_name: frontend_container
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  data:
