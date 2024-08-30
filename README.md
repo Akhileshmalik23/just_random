@@ -1,132 +1,36 @@
-# Docker Tutorial
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[Complete Docker Tutorial](https://alpha1212.notion.site/Dockerising-a-Full-Stack-Application-for-Publishing-it-to-GitHub-d2029910628b4259a5ad6e1963776a47?pvs=4)
+## Getting Started
 
-This is Docker tutorial for You to understand the basic functioning of Dockerizing your full stack application and pulishing it to GitHub, So that anyone can download and use.
-
----
-
-# 1.0 Prequisite
-- Node version 21.1.0
-- MoongoDB (atlas) account
-- Docker Desktop should be in your computer for Docker installation only.
-
----
-
-# 2.0 Installation
-
-# Method 1: To Run the project using docker
-
-- Step 1: Clone the Repo
+First, run the development server:
 
 ```bash
- git clone git@github.com:abhyuday1212/DockerTutorial.git
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-- Step 2: Go the EvaluationTask folder & run
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
- docker-compose up
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Step 3: Frontend Url
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```bash
- http://localhost:5173/
-```
+## Learn More
 
-- Step 4: Backend Url for hitting the server using postman
+To learn more about Next.js, take a look at the following resources:
 
-```bash
- http://localhost:8080/
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-</br>
+## Deploy on Vercel
 
-# Method 2: To run the project Manually:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Install the project by cloning this repo from your terminal.
-
-- Step 1: Clone the Repo
-
-```bash
- git clone git@github.com:abhyuday1212/DockerTutorial.git
-```
-
-- Go to the #root folder, open terminal in VS-Code and write this command
-
-```bash
- cd backend
-```
-
-- Install the dependencies using this command for backend
-
-```bash
- npm i
-```
-
-- If any ERR ocured in terminal the use this command and reinstall the dependencies using this line
-
-```bash
-  npm i --force
-```
-
-- Install the dependencies using this command for frontend
-
-```bash
-  cd frontend
-```
-
-- If any ERR occures in terminal, then use this command and reinstall the dependencies using this line
-
-```bash
-  npm i --force
-```
-
-### Run the backend server.
-
-- Goto #root folder and run these commands in your powershell.
-
-- Open a new powershell and write this command to move to backend directory.
-
-```bash
-  cd backend
-```
-
-```bash
-  npm start
-```
-
-- If terminal returns Port started successfully at ${PORT} & Databse connected successfully than you are good to go.
-
-### Open a new powershell in your VS-Code and write this command to move to frontend directory from the root folder and start the server.
-
-```bash
-  cd frontend
-```
-
-```bash
-  npm run dev
-```
-
----
-
-# 3.0 Tech Stack
-
-_Client:_ React(Build using Vite), TailwindCss.
-
-_Server:_ MongoDB , Express.js , Node.js .
-
-# 4.0 Docker iamges uploaded here
-
-```bash
-https://hub.docker.com/repository/docker/abhyuday1212/blog-app-frontend/general
-```
-
-```bash
-https://hub.docker.com/repository/docker/abhyuday1212/blog-app-backend/general
-```
-
- 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
