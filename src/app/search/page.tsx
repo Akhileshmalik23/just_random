@@ -10,17 +10,17 @@ const items = [
   {
     title: 'Civil Procedure Rules',
     description: 'Comprehensive guidelines governing civil litigation procedures.',
-    link: '/civil-procedure-rules',
+    link: 'search/civil-procedure-rules',
   },
   {
     title: 'Criminal Procedure Code',
     description: 'Detailed rules and regulations for criminal proceedings and trials.',
-    link: '/criminal-procedure-code',
+    link: 'search/criminal-procedure-code',
   },
   {
     title: 'Family Law Regulations',
     description: 'Rules pertaining to family law matters, including divorce and custody.',
-    link: '/family-law-regulations',
+    link: 'search/family-law-regulations',
   },
   {
     title: 'Evidence Act',
