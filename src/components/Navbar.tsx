@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
                 href="/complains"
                 className="text-gray-300 hover:text-white transition duration-300"
               >
-                Complaints
+                complains
               </Link>
             </li>
             <li>

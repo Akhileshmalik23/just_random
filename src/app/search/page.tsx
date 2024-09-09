@@ -6,6 +6,20 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { GoSearch } from "react-icons/go";
 
+const section = {
+  title: "Section 302",
+  description: "Punishment for murder",
+  penalties: {
+    fine: 10000,
+    imprisonment: "Life imprisonment",
+    deathPenalty: "Yes",
+    propertyForfeiture: "Yes",
+    restitution: "No",
+    probation: "No",
+    communityService: "No",
+    disqualification: "No",
+  }
+};
 const items = [
   {
     title: 'Civil Procedure Rules',
@@ -31,7 +45,7 @@ const items = [
     title: 'Employment Tribunal Rules',
     description: 'Procedural rules for handling disputes in employment tribunals.',
     link: '/employment-tribunal-rules',
-  },
+  },
 ];
 
 
@@ -43,11 +57,11 @@ export default function Search() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [categories, setCategories] = useState([]);
 
- 
+
 
   const handleExpand = () => {
     setIsExpanded(true);
-    setSuggestions(["Suggestion 1", "Suggestion 2", "Suggestion 3"]);
+    setSuggestions(["IPC Section 302 - Punishment for murder", "IPC Section 375 - Definition of rape", "BNS Section 23-Act of a person incapable of judgment by reason of intoxication caused against his will"]);
   };
 
   const handleBlur = () => {
@@ -111,8 +125,9 @@ export default function Search() {
                         <GoSearch className="w-5 h-5" />
                       </div>
                       <div
-                        className="text-gray-800 dark:text-gray-200"
+                        className="text-white dark:text-gray-200"
                         onChange={handleSuggestionClick}
+
                       >
                         {suggestion}
                       </div>
@@ -132,7 +147,29 @@ export default function Search() {
               <h1 className="text-3xl font-bold flex justify-center mt-5 text-gray-900 dark:text-gray-200">
                 Search Result
               </h1>
-              <HoverEffect items={items} className="w-full max-w-screen-lg" />
+              {/* <HoverEffect items={items} className="w-full max-w-screen-lg" />
+              */}
+
+              <div className="max-w-96 mx-auto my-4">
+                <div className="p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800">
+                  <h2 className="text-2xl font-bold mb-3 text-white">{section.title}</h2>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-300">Description</h3>
+                  <p className="text-gray-400 mb-4">{section.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-300">Penalties</h3>
+                  <ul className="list-disc list-inside space-y-1 text-gray-400">
+                    <li><strong className="text-white">Fine:</strong> {section.penalties.fine}</li>
+                    <li><strong className="text-white">Imprisonment:</strong> {section.penalties.imprisonment}</li>
+                    <li><strong className="text-white">Death Penalty:</strong> {section.penalties.deathPenalty}</li>
+                    <li><strong className="text-white">Property Forfeiture:</strong> {section.penalties.propertyForfeiture}</li>
+                    <li><strong className="text-white">Restitution:</strong> {section.penalties.restitution}</li>
+                    <li><strong className="text-white">Probation:</strong> {section.penalties.probation}</li>
+                    <li><strong className="text-white">Community Service:</strong> {section.penalties.communityService}</li>
+                    <li><strong className="text-white">Disqualification:</strong> {section.penalties.disqualification}</li>
+                  </ul>
+                </div>
+              </div>
+
+
             </>
           ) : (
             <>
