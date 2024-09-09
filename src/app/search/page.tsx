@@ -72,25 +72,30 @@ export default function Search() {
   };
 
   return (
-    <>
-      <h1 className="text-3xl font-bold flex justify-center mt-5 text-gray-900 dark:text-gray-200">
+    <div>
+      <div className="bg-black ">d</div>
+      <h1 className="text-3xl font-bold flex justify-center mt-5 text-gray-900 dark:text-gray-200 mt-12">
         Search the Rule Book
       </h1>
       <p className="text-lg mb-6 flex justify-center text-gray-500 dark:text-gray-300">
         Find the rules quickly and easily
       </p>
-      
+
       <div onClick={handleExpand} onBlur={handleBlur}>
         <PlaceholdersAndVanishInput
           onChange={handleInputChange}
           onSubmit={handleFormSubmit}
-          placeholders={['Search by IPC Section (e.g., 302, 375)', 'Enter Case ID', 'Search Bharatiya Nyaya Sanhita Section']}
+          placeholders={[
+            "Search by IPC Section (e.g., 302, 375)",
+            "Enter Case ID",
+            "Search Bharatiya Nyaya Sanhita Section",
+          ]}
         />
         <div className="flex justify-center w-full">
           {isExpanded && (
             <div
               className="mt-2 w-5/12 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg p-2 z-10"
-              style={{ backgroundColor: '#27272A' }}
+              style={{ backgroundColor: "#27272A" }}
             >
               <ul className="space-y-1">
                 {suggestions.map((suggestion, index) => (
@@ -105,7 +110,10 @@ export default function Search() {
                       <div className="text-gray-600 dark:text-gray-300">
                         <GoSearch className="w-5 h-5" />
                       </div>
-                      <div className="text-gray-800 dark:text-gray-200" onChange={handleSuggestionClick}>
+                      <div
+                        className="text-gray-800 dark:text-gray-200"
+                        onChange={handleSuggestionClick}
+                      >
                         {suggestion}
                       </div>
                     </div>
@@ -134,6 +142,6 @@ export default function Search() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
